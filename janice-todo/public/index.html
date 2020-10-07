@@ -2,13 +2,45 @@
 <html>
 <head>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-    <title></title>
+    <link rel="stylesheet" href="styles.css" >
+    <title>todo CheckList</title>
 </head>
 <body>
-  <div id="my-app"></div>
+    <div id="my-app">
+        <h2>Todo List</h2>
+        <input type="text" v-model="enteredTodoValue" />
+        <button @click="addTodo">Add</button>
+        <h3>Todo CheckList</h3>
+        <p v-if="todo.length === 0 ">Please add an item above</p>
+        <p v-if="todo.length > 0 ">Select to complete your checklist below:
+        <ul>
+            <li v-for="td in todo">
+                {{ td }}
+                <a style="float: right;" @click="removeTodo">x</a>
+            </li>
+        </ul>
+    </div>
   <script type="text/javascript">
     var app = new Vue({
-      el: '#my-app'
+      el: '#my-app',
+        data(){
+            return{
+                enteredTodoValue: '',
+                todo: []
+            };
+        },
+        methods:{
+          addTodo:function(){
+              if(!this.enteredTodoValue){
+                  return alert('Input cannot be empty');
+              }
+              this.todo.push(this.enteredTodoValue);
+              this.enteredTodoValue = '';
+          },
+          removeTodo:function(idx){
+              this.todo.splice(idx, 1);
+          }
+        }
     });
   </script>
 </body>
