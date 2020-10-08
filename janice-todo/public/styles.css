@@ -55,7 +55,6 @@ header {
 #my-app input {
   font: inherit;
   border: 1px solid #ccc;
-  width: 85%;
 }
 
 #my-app input:focus {
@@ -80,3 +79,12 @@ header {
   border-color: #ec3169;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
 }
+.todoList li {
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+

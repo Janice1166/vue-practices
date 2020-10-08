@@ -8,15 +8,16 @@
 <body>
     <div id="my-app">
         <h2>Todo List</h2>
-        <input type="text" v-model="enteredTodoValue" />
+        <input type="text" v-model="enteredTodoValue" style="width: 85%;"/>
         <button @click="addTodo">Add</button>
         <h3>Todo CheckList</h3>
         <p v-if="todo.length === 0 ">Please add an item above</p>
         <p v-if="todo.length > 0 ">Select to complete your checklist below:
-        <ul>
-            <li v-for="td in todo">
-                {{ td }}
-                <a style="float: right;" @click="removeTodo">x</a>
+        <ul class="todoList">
+            <li v-for="td in todo" :class="{completed: td.isCompleted}">
+                <input type="checkbox" @click="toggleComplete(td)" v-model="td.isCompleted"/>
+                    {{td.label}}
+                <a style="float: right;" @click="removeTodo(td)">x</a>
             </li>
         </ul>
     </div>
@@ -26,20 +27,36 @@
         data(){
             return{
                 enteredTodoValue: '',
-                todo: []
+                todo: [],
             };
         },
-        methods:{
-          addTodo:function(){
-              if(!this.enteredTodoValue){
-                  return alert('Input cannot be empty');
-              }
-              this.todo.push(this.enteredTodoValue);
-              this.enteredTodoValue = '';
-          },
-          removeTodo:function(idx){
-              this.todo.splice(idx, 1);
-          }
+        methods: {
+            addTodo: function () {
+                if (!this.enteredTodoValue) {
+                    return alert('Input cannot be empty');
+                }
+                this.todo.push({
+                    label: this.enteredTodoValue,
+                    isCompleted: falseohh
+                });
+                this.enteredTodoValue = '';
+            },
+            removeTodo: function (idx) {
+                this.todo.splice(idx, 1);
+            },
+            toggleComplete(td) {
+                for (var i in this.todo) {
+                    if (td === this.todo[i]) {
+                        if (td.isCompleted)
+                            td.isCompleted = false;
+                        else
+                            td.isCompleted = true;
+                    }
+                }
+            },
+            // toggleComplete(td){
+            //     td.isCompleted = !td.isCompleted;
+            // }
         }
     });
   </script>

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c15bd23d-c88a-454e-bab7-1bb62c626aa9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/janice-todo/public/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/janice-todo/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/janice-todo/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/janice-todo/public/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/janice-todo/public/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602032985928</updated>
-      <workItem from="1602032987094" duration="5065000" />
+      <workItem from="1602032987094" duration="15054000" />
     </task>
     <servers />
   </component>
@@ -61,9 +62,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1280.680@0.0.1280.680" timestamp="1602053132455" />
-    <state x="-23" y="154" key="run.anything.popup" timestamp="1602054856196">
+    <state x="-23" y="154" key="run.anything.popup" timestamp="1602067961606">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-23" y="154" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1602054856196" />
+    <state x="-23" y="154" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1602067961606" />
   </component>
 </project>
